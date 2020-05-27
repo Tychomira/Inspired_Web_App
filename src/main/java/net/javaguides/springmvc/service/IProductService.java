@@ -14,7 +14,7 @@ import net.javaguides.springmvc.entity.Product;
  */
 public interface IProductService {
 
-    public List<Product> getProducts();
+    public List<Product> findProducts();
 
     public void saveProduct(Product theProduct);
 

@@ -5,16 +5,12 @@ net\javaguides\springmvc\controller\ProductController.class
 net\javaguides\springmvc\dao\IUserDao.class
 net\javaguides\springmvc\dao\ProductDaoImpl.class
 net\javaguides\springmvc\controller\UserController.class
-net\javaguides\springmvc\service\CustomerService.class
 net\javaguides\springmvc\service\UserService.class
 net\javaguides\springmvc\config\AppInitializer.class
 net\javaguides\springmvc\config\AppContext.class
-net\javaguides\springmvc\service\CustomerServiceImpl.class
 net\javaguides\springmvc\entity\User.class
-net\javaguides\springmvc\dao\IObjectDao.class
 net\javaguides\springmvc\entity\Product.class
 net\javaguides\springmvc\service\UserServiceImpl.class
-net\javaguides\springmvc\controller\CustomerController.class
 net\javaguides\springmvc\dao\UserDaoImpl.class
 net\javaguides\springmvc\config\WebMvcConfig.class
 net\javaguides\springmvc\dao\IProductDAO.class

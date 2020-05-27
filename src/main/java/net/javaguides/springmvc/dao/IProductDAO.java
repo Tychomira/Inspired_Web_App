@@ -12,9 +12,9 @@ import java.util.List;
  * @author ticho
  */
 public interface IProductDAO {
-    public List<Product> getProducts();
+    public List<Product> findProducts();
 
-	public void saveCustomer(Product theProduct);
+	public void saveProduct(Product theProduct);
 
 	public Product getProduct(int theId);
 

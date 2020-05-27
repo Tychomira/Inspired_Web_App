@@ -24,8 +24,8 @@ public class ProductServiceImpl implements IProductService {
         
     @Override
     @Transactional
-    public List<Product> getProducts() {
-      return productDAO.getProducts();
+    public List<Product> findProducts() {
+      return productDAO.findProducts();
     }
 
     @Override

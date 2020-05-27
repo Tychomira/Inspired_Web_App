@@ -6,7 +6,7 @@ import net.javaguides.springmvc.entity.User;
 
 public interface UserService {
 
-	public List<User> findAll();
+	public List<User> getUsers();
 
 //	public void saveCustomer(Customer theCustomer);
 //

@@ -6,32 +6,14 @@ import net.javaguides.springmvc.entity.User;
 import org.hibernate.Criteria;
 
 @Repository
-public class UserDaoImpl extends AbstractDao<Integer, User> implements IObjectDao {
+public class UserDaoImpl extends AbstractDao<Integer, User> implements IUserDao {
 
     @Override
-    public List<User> findAll() {
+    public List<User> getUsers() {
         Criteria criteria = createEntityCriteria();
         return (List<User>) criteria.list();  
     }
 
-    @Override
-    public Object findById(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean save(Object entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean update(Object entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
 }
