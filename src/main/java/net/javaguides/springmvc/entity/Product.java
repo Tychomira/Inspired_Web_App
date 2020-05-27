@@ -40,6 +40,9 @@ public class Product {
     @Column(name = "category_type_id")
     private int category_type_id;
 
+//    @ManyToMany(mappedBy="subjects")
+//    private List<Student> students = new ArrayList<Student>();
+    
     public Product() {
     }
 

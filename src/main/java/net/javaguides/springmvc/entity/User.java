@@ -24,6 +24,12 @@ public class User {
 
     @Column(name = "email")
     private String email;
+    
+//    @ManyToMany(cascade = CascadeType.ALL)
+//    @JoinTable(name = "STUDENT_SUBJECT", 
+//        joinColumns = { @JoinColumn(name = "STUDENT_ID") }, 
+//        inverseJoinColumns = { @JoinColumn(name = "SUBJECT_ID") })
+//    private List<Subject> subjects = new ArrayList<Subject>();
 
 //    @Column(name = "password")
 //    private String password;
