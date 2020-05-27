@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.javaguides.springmvc.entity;
 
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,10 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- * @author ticho
- */
 @Entity
 @Table(name = "orders")
 public class Order {
@@ -28,9 +20,12 @@ public class Order {
     @Column(name = "user_id")
     private String userId;
     
-     @Column(name = "product_id")
+    @Column(name = "product_id")
     private String productId;
 
+    @Column(name = "product_id")
+    private Date purchase_date;
+     
     public Order() {
     }
 
@@ -58,11 +53,17 @@ public class Order {
         this.productId = productId;
     }
 
+    public Date getPurchase_date() {
+        return purchase_date;
+    }
+
+    public void setPurchase_date(Date purchase_date) {
+        this.purchase_date = purchase_date;
+    }
+
     @Override
     public String toString() {
-        return "Order{" + "id=" + id + ", userId=" + userId + ", productId=" + productId + '}';
-    }
-     
-     
+        return "Order{" + "id=" + id + ", userId=" + userId + ", productId=" + productId + ", purchase_date=" + purchase_date + '}';
+    }   
 
 }

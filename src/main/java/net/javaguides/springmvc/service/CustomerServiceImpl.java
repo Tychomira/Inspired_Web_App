@@ -6,30 +6,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import net.javaguides.springmvc.dao.CustomerDAO;
-import net.javaguides.springmvc.entity.Customer;
+import net.javaguides.springmvc.entity.User;
+import net.javaguides.springmvc.dao.IUserDao;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired
-	private CustomerDAO customerDAO;
+	private IUserDao customerDAO;
 	
 	@Override
 	@Transactional
-	public List<Customer> getCustomers() {
+	public List<User> getCustomers() {
 		return customerDAO.getCustomers();
 	}
 
 	@Override
 	@Transactional
-	public void saveCustomer(Customer theCustomer) {
+	public void saveCustomer(User theCustomer) {
 		customerDAO.saveCustomer(theCustomer);
 	}
 
 	@Override
 	@Transactional
-	public Customer getCustomer(int theId) {
+	public User getCustomer(int theId) {
 		return customerDAO.getCustomer(theId);
 	}
 

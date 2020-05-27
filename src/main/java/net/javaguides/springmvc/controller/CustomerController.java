@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import net.javaguides.springmvc.entity.Customer;
+import net.javaguides.springmvc.entity.User;
 import net.javaguides.springmvc.service.CustomerService;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -24,20 +24,20 @@ public class CustomerController {
 	
 	@GetMapping(value = "/list")
 	public String listCustomers(Model theModel) {
-		List<Customer> theCustomers = customerService.getCustomers();
+		List<User> theCustomers = customerService.getCustomers();
 		theModel.addAttribute("customers", theCustomers);
 		return "list-customers";
 	}
 	
 	@GetMapping("/showForm")
 	public String showFormForAdd(Model theModel) {
-		Customer theCustomer = new Customer();
+		User theCustomer = new User();
 		theModel.addAttribute("customer", theCustomer);
 		return "customer-form";
 	}
 	
 	@PostMapping("/saveCustomer")
-	public String saveCustomer(@ModelAttribute("customer") Customer theCustomer) {
+	public String saveCustomer(@ModelAttribute("customer") User theCustomer) {
 		customerService.saveCustomer(theCustomer);	
 		return "redirect:/customer/list";
 	}
@@ -45,7 +45,7 @@ public class CustomerController {
 	@GetMapping("/updateForm")
 	public String showFormForUpdate(@RequestParam("customerId") int theId,
 									Model theModel) {
-		Customer theCustomer = customerService.getCustomer(theId);	
+		User theCustomer = customerService.getCustomer(theId);	
 		theModel.addAttribute("customer", theCustomer);
 		return "customer-form";
 	}

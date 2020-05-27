@@ -1,10 +1,10 @@
-package net.javaguides.springmvc.service;
+package net.javaguides.springmvc.dao;
 
 import java.util.List;
 
 import net.javaguides.springmvc.entity.User;
 
-public interface CustomerService {
+public interface IUserDao {
 
 	public List<User> getCustomers();
 
