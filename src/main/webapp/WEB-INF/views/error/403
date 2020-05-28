@@ -1,0 +1,30 @@
+<%-- 
+    Document   : 404
+    Created on : 28 Μαϊ 2020, 5:04:13 μμ
+    Author     : user
+--%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="windows-1253"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1253">
+        <title>Ups An Error occured!</title>
+    </head>
+    <body>
+	<div class="container">
+			<div class="container-wrapper-login">
+				<div style="text-align:center;">
+					<h1>
+						<i style="font-size:3.0em; color:#eeeeee;" class="glyphicon glyphicon-exclamation-sign"></i> 
+						404
+					</h1>
+					<h3>  Sorry, page not found</h3>
+					<p> </p>
+					<a class="btn btn-default" href="<c:url value="javascript:history.back()" />"> 
+						Go back
+					</a>
+				</div>
+			</div>
+		
